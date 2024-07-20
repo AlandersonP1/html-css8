@@ -11,6 +11,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position:relative;
         }
 
         td, th {
@@ -18,16 +19,37 @@
             padding: 10px;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray
+        }
+
         thead {
             background-color: gray;
             color: white;
         }
-    </style>
+        thead > tr > th { 
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+
+        }
+        
+       tbody > tr:nth-child(odd) {
+        background-color: lightgrey;
+       }
+            </style>
 </head>
 <body>
     <h1>Uso de tabelas grandes</h1>
     <table>
+        <caption> População das unidades federativas</caption>
         <thead>
+            <tr>Total de habitantes</tr>
+            <td class= "num"> <strong>210.147.125</strong> </td>
+            </tr>
             <tr>
            <th>Estado</th>
            <th>População</th>
@@ -49,6 +71,23 @@
             </tr>
 
         </tbody>
+        <table>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dolores ratione optio, minus inventore ipsum ea eum, 
+                nihil id tempore nobis hic, enim fugit voluptas autem. Maiores amet voluptate quam!
+            </p>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur sapiente adipisci et voluptatem sunt quo veniam necessitatibus eveniet velit molestias,
+                 blanditiis eos corrupti ut. Vitae mollitia consequuntur temporibus expedita officiis?
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, optio, atque distinctio, accusamus modi ipsam inventore
+                 obcaecati non perferendis sit a nisi ullam vero placeat! Consequatur reiciendis tempore recusandae fuga!</p>
+
+             <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio accusamus illo soluta nam eveniet distinctio libero,
+                 eaque quia sunt? Veniam praesentium dolores deserunt consequatur quas aut doloremque assumenda esse itaque.
+             </p>    
+        </table>
         <tfoot>
             <tr>
                 <th>Total de habitantes</th>
